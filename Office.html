@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Личный кабинет на сайте здравоохранения">
+    <title>Личный кабинет — Здравоохранение</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .container {
+            width: 60%;
+            margin: 40px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: slideIn 1s forwards;
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        .user-info, .update-form {
+            margin-bottom: 20px;
+        }
+
+        .user-info p {
+            font-size: 1.1em;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-size: 1.2em;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .exit-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        .exit-button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Личный кабинет</h1>
+    </header>
+
+    <div class="container">
+        <h2>Информация о пользователе</h2>
+
+        <!-- Блок с информацией пользователя -->
+        <div class="user-info">
+            <p><strong>Имя:</strong> Иван Иванов</p>
+            <p><strong>Email:</strong> ivanov@mail.ru</p>
+            <p><strong>Телефон:</strong> +7 (800) 555-35-35</p>
+            <p><strong>Дата рождения:</strong> 01.01.1980</p>
+            <p><strong>Пол:</strong> Мужчина</p>
+        </div>
+
+        <h2>Редактирование данных</h2>
+
+        <!-- Форма редактирования данных -->
+        <form action="update-profile.php" method="POST" class="update-form">
+            <div class="form-group">
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" name="name" value="Иван Иванов" required placeholder="Введите ваше имя">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="ivanov@mail.ru" required placeholder="Введите ваш email">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" value="+7 (800) 555-35-35" required placeholder="Введите номер телефона">
+            </div>
+
+            <div class="form-group">
+                <label for="birthdate">Дата рождения</label>
+                <input type="date" id="birthdate" name="birthdate" value="1980-01-01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Пол</label>
+                <select id="gender" name="gender" required>
+                    <option value="male" selected>Мужчина</option>
+                    <option value="female">Женщина</option>
+                    <option value="other">Другой</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Обновить данные">
+            </div>
+        </form>
+
+        <!-- Кнопка выхода на главную -->
+        <a href="index.html" class="exit-button">На главную страницу</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Здравоохранение. Все права защищены.</p>
+    </footer>
+</body>
+</html>

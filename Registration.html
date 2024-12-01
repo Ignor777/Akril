@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Здравоохранительная компания — регистрация нового пользователя для получения медицинских услуг.">
+    <title>Регистрация - Здравоохранительная компания</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Основной стиль страницы */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Шапка */
+        header {
+            background: linear-gradient(to right, #0072b1, #004f79);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 16px;
+        }
+
+        /* Контейнер для формы */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        .container h2 {
+            margin-top: 0;
+            color: #0072b1;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .container p {
+            color: #555;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Эффект появления контейнера */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Анимация появления каждого поля формы */
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+            opacity: 0;
+            animation: fadeInField 0.8s forwards;
+        }
+
+        .form-group:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        .form-group:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        .form-group:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        .form-group:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+        .form-group:nth-child(5) {
+            animation-delay: 1s;
+        }
+        .form-group:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+        .form-group:nth-child(7) {
+            animation-delay: 1.4s;
+        }
+
+        @keyframes fadeInField {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #444;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: #0072b1;
+            box-shadow: 0 0 5px rgba(0, 114, 177, 0.3);
+            outline: none;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #0072b1;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #005f8d;
+        }
+
+        .form-group input[type="submit"]:active {
+            background-color: #004c6e;
+        }
+
+        .form-group .error {
+            color: red;
+            font-size: 12px;
+            position: absolute;
+            bottom: -16px;
+            left: 0;
+        }
+
+        .form-group .success {
+            color: green;
+            font-size: 12px;
+            position: absolute;
+            bottom: -16px;
+            left: 0;
+        }
+
+        /* Кнопка возврата */
+        .back-button {
+            display: block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #004f79;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #003352;
+        }
+
+        /* Подвал */
+        footer {
+            background: linear-gradient(to right, #0072b1, #004f79);
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header>
+        <h1>Здравоохранительная компания</h1>
+        <p>Запишитесь на наши медицинские услуги, зарегистрировавшись на сайте</p>
+    </header>
+
+    <!-- Форма регистрации -->
+    <div class="container">
+        <h2>Регистрация</h2>
+        <p>Пожалуйста, заполните форму для регистрации.</p>
+        
+        <!-- Кнопка возврата на главную -->
+        <a href="index.html" class="back-button">Вернуться на главную</a>
+
+        <form id="registration-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="fullname">Полное имя</label>
+                <input type="text" id="fullname" name="fullname" required placeholder="Введите ваше полное имя">
+                <span class="error" id="fullname-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Введите ваш email">
+                <span class="error" id="email-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Номер телефона</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Введите номер телефона">
+                <span class="error" id="phone-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="dob">Дата рождения</label>
+                <input type="date" id="dob" name="dob" required>
+                <span class="error" id="dob-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required placeholder="Введите пароль">
+                <span class="error" id="password-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Подтверждение пароля</label>
+                <input type="password" id="confirm-password" name="confirm-password" required placeholder="Подтвердите пароль">
+                <span class="error" id="confirm-password-error"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Зарегистрироваться">
+                <span class="success" id="success-message"></span>
+            </div>
+        </form>
+    </div>
+
+    <!-- Подвал -->
+    <footer>
+        <p>&copy; 2024 Здравоохранительная компания. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Скрипт для валидации формы
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let isValid = true;
+            let fullname = document.getElementById('fullname').value;
+            let email = document.getElementById('email').value;
+            let phone = document.getElementById('phone').value;
+            let dob = document.getElementById('dob').value;
+            let password = document.getElementById
