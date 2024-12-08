@@ -6,124 +6,12 @@
     <meta name="description" content="Личный кабинет на сайте здравоохранения">
     <title>Личный кабинет — Здравоохранение</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-
-        .container {
-            width: 60%;
-            margin: 40px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(-20px);
-            animation: slideIn 1s forwards;
-        }
-
-        @keyframes slideIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        h2 {
-            color: #4CAF50;
-        }
-
-        .user-info, .update-form {
-            margin-bottom: 20px;
-        }
-
-        .user-info p {
-            font-size: 1.1em;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-
-        .form-group input, .form-group select {
-            width: 100%;
-            padding: 10px;
-            font-size: 1em;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .form-group input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-            border: none;
-            font-size: 1.2em;
-        }
-
-        .form-group input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        .exit-button {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-        }
-
-        .exit-button:hover {
-            background-color: #45a049;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            margin-top: 40px;
-        }
-    </style>
 </head>
 <body>
+
     <header>
         <h1>Личный кабинет</h1>
+        <p>Добро пожаловать в ваш личный кабинет на сайте здравоохранения</p>
     </header>
 
     <div class="container">
@@ -176,12 +64,14 @@
             </div>
         </form>
 
-        <!-- Кнопка выхода на главную -->
-        <a href="index.html" class="exit-button">На главную страницу</a>
+        <h2>Записаться на прием</h2>
+        <p>Вы можете записаться на прием к врачу прямо через ваш личный кабинет.</p>
+        <a href="appointment.html">Перейти к записи на прием</a>
     </div>
 
     <footer>
         <p>&copy; 2024 Здравоохранение. Все права защищены.</p>
     </footer>
+
 </body>
 </html>
