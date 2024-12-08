@@ -3,197 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Записаться на консультацию и прием к Кардиологу. Получите квалифицированную медицинскую помощь.">
+    <meta name="description" content="Записаться на консультацию и прием к терапевту. Получите квалифицированную медицинскую помощь.">
     <title>Запись на консультацию к терапевту</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Стили для страницы записи */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            opacity: 0; /* Начальная непрозрачность */
-            animation: fadeIn 1s ease-out forwards;
-            animation-delay: 0s; /* Задержка для плавного появления */
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            flex: 1;
-            opacity: 0; /* Начальная непрозрачность */
-            animation: fadeIn 1s ease-out forwards;
-            animation-delay: 0.5s; /* Задержка для плавного появления */
-        }
-
-        h2 {
-            color: #4CAF50;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-            opacity: 0; /* Начальная непрозрачность */
-            animation: fadeIn 1s ease-out forwards;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            font-size: 1em;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            background-color: #d9f2e9; /* Подсвечивание при фокусе */
-        }
-
-        /* Анимация появления с плавным всплытием */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(30px); /* Элемент стартует ниже */
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0); /* Элемент в конечной позиции */
-            }
-        }
-
-        .form-group:nth-child(1) {
-            animation-delay: 1s;
-        }
-
-        .form-group:nth-child(2) {
-            animation-delay: 1.2s;
-        }
-
-        .form-group:nth-child(3) {
-            animation-delay: 1.4s;
-        }
-
-        .form-group:nth-child(4) {
-            animation-delay: 1.6s;
-        }
-
-        .form-group:nth-child(5) {
-            animation-delay: 1.8s;
-        }
-
-        .form-group:nth-child(6) {
-            animation-delay: 2s;
-        }
-
-        .form-group:nth-child(7) {
-            animation-delay: 2.2s;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            margin-top: auto;
-            width: 100%;
-            box-sizing: border-box;
-            opacity: 0; /* Начальная непрозрачность */
-            animation: fadeIn 1s ease-out forwards;
-            animation-delay: 2.5s; /* Задержка для плавного появления */
-        }
-
-        footer p {
-            margin: 0;
-            padding: 10px;
-            border: 2px solid #fff;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
-        /* Элементы на странице с плавным раскрытием */
-        .contact-info {
-            opacity: 0; /* Начальная непрозрачность */
-            animation: fadeIn 1s ease-out forwards;
-            animation-delay: 2.7s; /* Задержка для плавного появления */
-        }
-
-        .back-button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            font-size: 1.1em;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            opacity: 0; /* Начальная непрозрачность */
-            animation: fadeIn 1s ease-out forwards;
-            animation-delay: 2.4s; /* Задержка для плавного появления */
-        }
-
-        .back-button:hover {
-            background-color: #0056b3;
-        }
-
-        .dentistry-link {
-            display: inline-block;
-            background-color: #ff5722;
-            color: white;
-            padding: 10px 20px;
-            font-size: 1.1em;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 20px;
-            opacity: 0; /* Начальная непрозрачность */
-            animation: fadeIn 1s ease-out forwards;
-            animation-delay: 2.6s; /* Задержка для плавного появления */
-        }
-
-        .dentistry-link:hover {
-            background-color: #e64a19;
-        }
-    </style>
 </head>
 <body>
-
     <header>
-        <h1>Запись на консультацию к Кардиологу</h1>
+        <h1>Запись на консультацию к Стоматологу</h1>
     </header>
 
     <div class="container">
         
-        <p>Пожалуйста, заполните форму ниже, чтобы записаться на консультацию к кардиологу. Мы свяжемся с вами для подтверждения записи.</p>
+        <p>Пожалуйста, заполните форму ниже, чтобы записаться на консультацию к стоматологу. Мы свяжемся с вами для подтверждения записи.</p>
 
         <!-- Кнопка возврата на главную страницу -->
-        <button class="back-button" onclick="window.location.href='index.html';">Вернуться на главную страницу</button>
+        <button class="back-button" onclick="window.location.href='index.html';">Вернуться на главную</button>
 
         <form action="submit-form.php" method="POST">
             <div class="form-group">
@@ -229,20 +53,6 @@
                     <option value="15:00">15:00</option>
                     <option value="16:00">16:00</option>
                     <option value="17:00">17:00</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="service-type">Выберите тип услуги</label>
-                <select id="service-type" name="service-type" required>
-                    <option value="">Выберите тип услуги</option>
-                    <option value="observation">Плановый осмотр</option>
-                    <option value="diagnostics">Эхокардиография—ультразвуковое исследование сердца, позволяющее оценить его структуру и функцию.</option>
-                    <option value="specialist-referral">Суточное мониторирование артериального давления (СМАД) — измерение давления в течение 24 часов.</option>
-                    <option value="hospitalization">Медикаментозная терапия — назначение лекарств для лечения гипертонии, ишемической болезни сердца, аритмий и других сердечно-сосудистых заболеваний.</option>
-                    <option value="sick-leave">Установка кардиостимулятора (пейсмекера) — помощь пациентам с нарушениями ритма сердца.</option>
-                    <option value="pregnancy-registration">Установка стентов — расширение суженных коронарных артерий для улучшения кровотока.</option>
-                    <option value="traffic-safety">Кардиоверсия — процедура для восстановления нормального ритма сердца при аритмиях.</option>
                 </select>
             </div>
 
